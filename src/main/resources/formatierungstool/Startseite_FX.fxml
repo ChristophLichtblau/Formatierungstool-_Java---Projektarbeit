@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane style="-fx-background-color: linear-gradient(to right, #737373,lightgrey, #737373, lightgrey,#737373);" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerStartseite">
+   <center>
+      <AnchorPane fx:id="ueberschrift" focusTraversable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="H1" layoutX="778.0" layoutY="53.0" text="Erstellen von Prüfungsfragen">
+               <font>
+                  <Font name="Arial Bold" size="26.0" />
+               </font>
+            </Label>
+            <Label fx:id="H2" layoutX="714.0" layoutY="205.0" text="Welche Art von Fragen möchten Sie erstellen?">
+               <font>
+                  <Font name="Arial" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="h_freitext" layoutX="404.0" layoutY="321.0" text="Freitext - Aufgabe">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="1374.0" layoutY="321.0" text="Multiple - Choice - Aufgabe">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Button fx:id="buttonFreitext" layoutX="376.0" layoutY="757.0" mnemonicParsing="false" onAction="#buttonFreitextAction" text="Freitext - Aufgabe - erstellen" textAlignment="CENTER">
+               <effect>
+                  <DropShadow height="15.0" radius="7.0" width="15.0" />
+               </effect>
+            </Button>
+            <Button fx:id="buttonMultiple" layoutX="1356.0" layoutY="757.0" mnemonicParsing="false" onAction="#buttonMultipleAction" text="Multipe - Choice - Aufgabe erstellen" textAlignment="CENTER">
+               <effect>
+                  <DropShadow height="15.0" radius="7.0" width="15.0" />
+               </effect>
+            </Button>
+            <ImageView fitHeight="382.0" fitWidth="556.0" layoutX="182.0" layoutY="356.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/Freitext.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="382.0" fitWidth="530.0" layoutX="1199.0" layoutY="356.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/MultipleChoice.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="buttonProgrammBeenden" contentDisplay="CENTER" layoutX="1700.0" layoutY="41.0" mnemonicParsing="false" onAction="#buttonProgrammBeendenAction" style="-fx-background-color: #666666; -fx-border-color: white;" text="Programm beenden" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <effect>
+                  <Reflection bottomOpacity="0.05" fraction="0.76" topOpacity="0.55">
+                     <input>
+                        <DropShadow height="15.0" radius="7.0" width="15.0" />
+                     </input>
+                  </Reflection>
+               </effect>
+            </Button>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

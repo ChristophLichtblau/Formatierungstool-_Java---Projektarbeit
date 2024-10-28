@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane style="-fx-background-color: linear-gradient(to right, #737373,lightgrey, #737373, lightgrey,#737373);" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerFreitext">
+   <center>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0">
+         <children>
+            <Label layoutX="858.0" layoutY="53.0" text="Freitext - Aufgabe">
+               <font>
+                  <Font name="Arial Bold" size="24.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="freitextFrageTextArea" layoutX="275.0" layoutY="343.0" prefHeight="472.0" prefWidth="1359.0" />
+            <Label layoutX="275.0" layoutY="323.0" text="BItte die Frage eingeben:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="275.0" layoutY="823.0" text="Wie viele Zeilen soll die Antwort enthalten?">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="freitextZeilen" layoutX="275.0" layoutY="852.0" prefHeight="25.0" prefWidth="166.0" promptText="Anzahl der Zeilen eingeben" />
+            <Button id="button_hinzufuegen" fx:id="freitextFrageHinzufuegen" layoutX="858.0" layoutY="1028.0" mnemonicParsing="false" onAction="#freitextFrageHinzufuegenAction" text="Frage zum Dokument hinzufügen" textAlignment="CENTER">
+               <effect>
+                  <DropShadow height="15.0" radius="7.0" width="15.0" />
+               </effect>
+            </Button>
+            <Button fx:id="button_zurueckZurStartseiteFreitext" layoutX="46.0" layoutY="1015.0" mnemonicParsing="false" onAction="#buttonZurueckZurStartseiteFreitextAction" text="zurück zur Startseite">
+               <effect>
+                  <DropShadow height="15.0" radius="7.0" width="15.0" />
+               </effect>
+            </Button>
+            <Label layoutX="275.0" layoutY="171.0" text="Wie lautet der Name der Aufgabe:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="freitextName" layoutX="275.0" layoutY="199.0" prefHeight="25.0" prefWidth="435.0" promptText="Name oder Nummer der Aufgabe" />
+            <Label layoutX="1378.0" layoutY="171.0" text="Wie viele Punkte können erreicht werden:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="freitextPunkte" layoutX="1472.0" layoutY="199.0" prefHeight="25.0" prefWidth="138.0" promptText="zu erreichende Punkte" />
+            <Label layoutX="1610.0" layoutY="202.0" text="Pkt.">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="1276.0" layoutY="823.0" text="In welchem Dokument soll die Frage gespeichert werden?">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Button fx:id="buttonprogrammBeendenFreitext" contentDisplay="CENTER" layoutX="1700.0" layoutY="41.0" mnemonicParsing="false" onAction="#buttonProgrammBeendenFreitextAction" style="-fx-background-color: #666666; -fx-border-color: white;" text="Programm beenden" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <effect>
+                  <Reflection bottomOpacity="0.05" fraction="0.76" topOpacity="0.55">
+                     <input>
+                        <DropShadow height="15.0" radius="7.0" width="15.0" />
+                     </input>
+                  </Reflection>
+               </effect>
+            </Button>
+            <Button fx:id="freitextDokumentErstellen" layoutX="1276.0" layoutY="852.0" mnemonicParsing="false" onAction="#freitextDokumentErstellenAction" text="neues Dokument erstellen">
+               <effect>
+                  <DropShadow height="15.0" radius="7.0" width="15.0" />
+               </effect>
+            </Button>
+            <TextField fx:id="freitextNeuesDokumentTextField" layoutX="1121.0" layoutY="852.0" promptText="Name neues Dokument" />
+            <Label layoutX="1341.0" layoutY="888.0" text="Frage wird in folgendes Dokument gespeichert:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="freitextLabelDokumentAusgewaehlt" alignment="CENTER" layoutX="1479.0" layoutY="915.0" prefHeight="25.0" prefWidth="155.0" style="-fx-background-color: #666666; -fx-border-width: 1px; -fx-border-color: black;" text="kein Dokument gewählt" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <effect>
+                  <DropShadow height="15.0" radius="7.0" width="15.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Label>
+            <ComboBox fx:id="freitextComboBox" layoutX="1457.0" layoutY="852.0" prefHeight="25.0" prefWidth="177.0" promptText="vorhandene Dokumente">
+               <effect>
+                  <DropShadow height="15.0" radius="7.0" width="15.0" />
+               </effect>
+            </ComboBox>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
